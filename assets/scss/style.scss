@@ -1,0 +1,329 @@
+$fontcolor: white;
+$fontcolor2: black;
+$border: 1px solid black;
+$textalign: center;
+$bgcolor: #e7e6e6;
+$bgcolor2: rgb(255, 235, 59);
+$shadow: 2px 2px $bgcolor2;
+$family: 'Pacifico', cursive;
+
+
+@mixin button (){
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: $bgcolor2;
+    color: $fontcolor2;
+    border: $border;
+    border-radius: 10px;
+
+    &:hover{
+        background-color: #45a049;
+    }
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 500px 750px 200px;
+}
+
+.header{
+   background-image: url(../images/film.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: grid;
+   grid-template-columns: 45% 55%;
+   border-bottom: $border;
+}
+
+.title{
+    text-align: $textalign;
+    margin-top: 25%;
+}
+
+h2{
+    font: {
+     family: 'Righteous', cursive; 
+     size: 3.5em;  
+    }
+    color: $fontcolor;
+    line-height: 3px;
+}
+
+.title p{
+    font: {
+        family: $family;
+        size: 2.5em;  
+    }
+   color: $fontcolor;
+}
+
+.button{
+    @include button()
+}
+
+.main{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 50% 50%;
+    border-bottom: $border;
+}
+
+.title2{
+    grid-column: 1/1;
+    text-align: $textalign;
+    background-color: $bgcolor;
+    border-radius: 10px;
+    margin: 0 10px;
+    margin-top: 25px;
+    box-shadow: $shadow;
+}
+
+.title2 p{
+    font: {
+        family: $family;
+        size: 2.5em;
+    }
+    color: $bgcolor2;
+    text-shadow: 1px 1px gray;
+    margin-top: 4%;
+}
+
+.contact{
+    grid-column: 2/2;
+    grid-row: 1/3;
+    
+}
+
+.form{
+    border-radius: 5px;
+    background-color: $bgcolor;
+    padding: 0.5px 35px; 
+    height: 610px;
+    width: 50%;
+    margin: 50px auto;
+    box-shadow: $shadow;
+    
+    p{
+        font: {
+            family: $family;
+            size: 1.5em;
+        }
+        color: $bgcolor2;
+        text-shadow: 1px 1px gray;
+        text-align: center;
+    }
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+  input[type=submit] {
+    @include button()
+  }
+  
+  
+  * {box-sizing:border-box}
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+    position: relative;
+  }
+  
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: $fontcolor2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+img{
+    margin: 20px 165px;
+}
+
+.button3{
+    @include button();
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+.footer{
+    background-image: linear-gradient(to right,#9ABCD5, black);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #face{
+        font-size: 50px;
+        color: blue;
+        margin-right: 5px;   
+    }
+
+    #tweet{
+        font-size: 50px;
+        color: rgb(0, 132, 255);
+        margin-left: 5px;   
+    }
+}
+
+.adres{
+    text-align: center;
+    margin-top: 30px;
+    p{
+        font: {
+            family: $family;
+            size: 1.5em;
+        }
+        color: $bgcolor;
+        line-height: 10px;
+    }
+}
+
+.map{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+
+* {box-sizing: border-box;}
+
+.open-button {
+  background-color: red;
+  color: white;
+  font-family: $family;
+  font-size: 1.5em;
+  padding: 15px 20px;
+  border: $border;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 140px;
+  left: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 140px;
+  left: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  font-family: $family;
+  font-size: 1.5em;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

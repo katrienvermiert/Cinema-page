@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Righteous" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div></div>
+                <div class="title">
+                    <h2>CineCity</h2>
+                    <p>where movies come to life</p>
+                    <a href="#" class="button">Homepage</a>
+                </div>
+            </div>
+            <div class="main">
+                <div class="title2">
+                    <p>Coming soon</p>
+                </div>
+
+                <div class="film">
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <img src="assets/images/lego.jpg" style="width:50%">
+                            <div class="info"> <a href="#" class="button3">info&tickets</a> </div>
+                        </div>
+                              
+                        <div class="mySlides fade">
+                            <img src="assets/images/captain.jpg" style="width:50%">
+                            <div class="info"> <a href="#" class="button3">info&tickets</a> </div>
+                        </div>
+                              
+                        <div class="mySlides fade">
+                            <img src="assets/images/dumbo.jpg" style="width:50%">
+                            <div class="info"> <a href="#" class="button3">info&tickets</a> </div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="assets/images/petsematary.jpg" style="width:50%">
+                            <div class="info"> <a href="#" class="button3">info&tickets</a> </div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="assets/images/us.jpg" style="width:50%">
+                            <div class="info"> <a href="#" class="button3">info&tickets</a> </div>
+                        </div>
+                              
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                             
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                        </div>
+                </div>
+
+                <div class="contact">
+                    <form class="form" action="action_page.php">
+
+                        <p>Contact</p>
+
+                        <label for="fname">Voornaam</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Je voornaam..">
+                            
+                        <label for="lname">Last Naam</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Je achternaam..">
+                            
+                        <label for="country">Land</label>
+                        <select id="country" name="country">
+                            <option value="Belgium">Belgïe</option>
+                            <option value="Netherlands">Nederland</option>
+                            <option value="Germany">Duitsland</option>
+                        </select>
+                        
+                        <p></p>
+                        <label for="subject">Onderwerp</label>
+                        <textarea id="subject" name="subject" placeholder="tekst.." style="height:200px"></textarea>
+                            
+                        <input type="submit" value="Submit">
+                            
+                    </form>
+
+                </div>
+                
+            </div>
+
+            <div class="footer">
+                <div class="social">
+                        <i class="fab fa-facebook-square" id="face"></i>
+                        <i class="fab fa-twitter-square" id="tweet"></i>
+                </div>
+
+                <div class="adres">
+                    <p>CINECITY</p>
+                    <p>Bosstraat 90</p>
+                    <p>3680 Maaseik</p>
+                </div>
+
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.683963166374!2d5.784724250791111!3d51.095839748432304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0c936e484375b%3A0x63c871543ffd77c!2sBosstraat+90%2C+3680+Maaseik!5e0!3m2!1sen!2sbe!4v1550588172995" width="300" height="180" allowfullscreen></iframe>
+                </div>
+
+                <div class="newsletter">
+                    <button class="open-button" onclick="openForm()">Newsletter</button>
+
+                    <div class="form-popup" id="myForm">
+                        <form action="/action_page.php" class="form-container">
+                            <h1>Schrijf je in</h1>
+                        
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
